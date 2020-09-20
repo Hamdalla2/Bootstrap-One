@@ -1,18 +1,53 @@
 #one{
 	display: block;
 	float: right;
-	width: 70%
+	width: 80%;
+	text-align: center;
+	
 }
 
 #users{
 	display: block;
 	float: left;
-	width: 30%
+	width: 20%;
+	text-align: center;
 }
 
 .two{
 	border-radius: 12px;
-	border-top: 3px solid black;
-	border-bottom: 3px solid black;
-	margin-top: 10px
+	border-top: 7px solid black;
+	margin-top: 10px;
+	
+}
+
+/* Qamar driver Hamdallah navigator */
+#txt{
+width: 70%;
+height: 40px;
+border-radius: 12px;
+background-color: rgb(213, 235, 213);
+margin-right: 16px;
+outline: none;
+font-weight: bold;
+text-align: center;
+
+}
+
+p{
+	font-weight: bold;
+	font-size: 30px;
+	
+}
+
+input[type=button]{
+	border-radius: 12px;
+	outline: none;
+	background-color: rgb(33, 128, 112);
+	color: white;
+	width: 80px;
+	height: 40px;
+}
+
+#two *{
+	padding-bottom: 20px;
 }
