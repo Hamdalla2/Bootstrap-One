@@ -1,12 +1,12 @@
 // Qamar driver Hamdallah navigator
 var obj = {}
+obj.dad = []
+obj.mom = []
 obj.tom = []
-obj.sam = []
-obj.kat = []
 var obj2 = {}
 obj2.tom = []
-obj2.sam = []
-obj2.kat = []
+obj2.dad = []
+obj2.mom = []
 
 function each(array, f) {
     if (!Array.isArray(array)) {
@@ -134,10 +134,13 @@ function w(e) {//Save Edit Function
 
 
 
-var users = ['Tom', 'Sam', 'Kat']
+var users = ['Dad', 'Mom', 'Tom']
+var famImages =['dad.png','mom.jpg','tom.png']
 for (var i in users) {
     var name = users[i]
-    $('#users').append('<input class=userimg type=image src=user1.png >' + '<span onclick=st(this)>' + users[i] + '</span>')
+    
+   // $("#my_image").attr("src",FamImages[i]);
+    $('#users').append('<input class=userimg type=image src='+famImages[i] +'>' + '<span onclick=st(this)>' + users[i] + '</span>')
 }
 
 function st(e) {
