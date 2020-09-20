@@ -1,9 +1,10 @@
+/* Hamdallah driver Qamar navigator */
 #one{
 	display: block;
 	float: right;
 	width: 80%;
 	text-align: center;
-	
+	color:rgb(33, 128, 112);
 }
 
 #users{
@@ -11,17 +12,18 @@
 	float: left;
 	width: 20%;
 	text-align: center;
+	color:rgb(33, 128, 112);
 }
 
 .two{
 	border-radius: 12px;
-	border-top: 7px solid black;
+	border-top: 7px solid rgb(33, 128, 112);
 	margin-top: 10px;
 	
 }
 
 /* Qamar driver Hamdallah navigator */
-#txt{
+input[type=text]{
 width: 70%;
 height: 40px;
 border-radius: 12px;
@@ -30,7 +32,7 @@ margin-right: 16px;
 outline: none;
 font-weight: bold;
 text-align: center;
-
+margin-bottom: 20px;
 }
 
 p{
@@ -48,6 +50,13 @@ input[type=button]{
 	height: 40px;
 }
 
+/* Hamdallah driver Qamar navigator */
 #two *{
-	padding-bottom: 20px;
+	margin: 20px 5px 20px 5px;
+	font-weight: bold;
+}
+
+#three *{
+	margin: 20px 5px 20px 5px;
+	font-weight: bold;
 }
