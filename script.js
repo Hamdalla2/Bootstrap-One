@@ -77,7 +77,6 @@ function st(e) {
 
     $('#userwelcom').text('Welcome ' + $(e).text())
     //console.log(name)
-    
     $('span').css('color','rgb(33, 128, 112)')
     $(e).css('color','black')
     $('#userwelcom').text('Welcome ' + $(e).text())
