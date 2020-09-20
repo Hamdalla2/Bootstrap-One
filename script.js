@@ -4,15 +4,25 @@ obj.tom = []
 obj.sam = []
 obj.kat = []
 function s() {
+    var name = $('#userwelcom').text().split(' ')
+    var Activeuser = name[1].toLowerCase()
     var value = $('#txt').val()
-    if (value === '') {
-        alert('Add Smoe Tasks!!')
-    }
+    console.log(Activeuser)
+    if (Activeuser === 'user') { alert('No user Selected') }
     else {
-        var newtask = $('<div calss=tasks></div>')
-        newtask.html("<input type=checkbox onclick=t(this)>" + value + "<input type=button value=Edit onclick=r(this)><input type=button value=Delete onclick=d(this)>")
-        $('#two').append(newtask)
-        $('#txt').val("")
+        if (value === '') {
+            alert('Add Smoe Tasks!!')
+        }
+        else {
+            var newtask = $('<div calss=tasks></div>')
+            var timeadd = Date().split(' ')
+            timeadd.pop(); timeadd.pop(); timeadd.pop(); timeadd.pop()
+
+            newtask.html("<input type=checkbox onclick=t(this)>" + value + "<input type=button value=Edit onclick=r(this)><input type=button value=Delete onclick=d(this)><br>" + timeadd.join(' '))
+            $('#two').append(newtask)
+            $('#txt').val("")
+            obj[Activeuser].push(value)
+        }
     }
 
 }
@@ -22,12 +32,17 @@ function t(e) {
     if ($(e).is(':checked')) {
         $('#three').append(x)
         $(x).css('text-decoration', 'line-through black')
+        // obj[Activeuser][done].pop
+        // obj[Activeuser][done].push(value)
 
 
     }
     else {
         $('#two').append(x)
         $(x).css('text-decoration', 'none')
+        // obj[Activeuser][notdone].push(value)
+        // obj[Activeuser][done].pop()
+
     }
 }
 
@@ -77,11 +92,12 @@ function st(e) {
 
     $('#userwelcom').text('Welcome ' + $(e).text())
     //console.log(name)
-    $('span').css('color','rgb(33, 128, 112)')
-    $(e).css('color','black')
+
+    $('span').css('color', 'rgb(33, 128, 112)')
+    $(e).css('color', 'black')
     $('#userwelcom').text('Welcome ' + $(e).text())
     var name = $('#userwelcom').text().split(' ')
-    console.log(name[1])
+    console.log(name[1].toLowerCase())
 
 
 }
