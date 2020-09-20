@@ -19,26 +19,24 @@
 	border-radius: 12px;
 	border-top: 7px solid rgb(33, 128, 112);
 	margin-top: 10px;
-	
 }
 
 /* Qamar driver Hamdallah navigator */
 input[type=text]{
-width: 70%;
-height: 40px;
-border-radius: 12px;
-background-color: rgb(213, 235, 213);
-margin-right: 16px;
-outline: none;
-font-weight: bold;
-text-align: center;
-margin-bottom: 20px;
+	width: 70%;
+	height: 40px;
+	border-radius: 12px;
+	background-color: rgb(213, 235, 213);
+	margin-right: 16px;
+	outline: none;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 p{
 	font-weight: bold;
 	font-size: 30px;
-	
 }
 
 input[type=button]{
