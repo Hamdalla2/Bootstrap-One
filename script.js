@@ -8,16 +8,16 @@ obj2.tom = []
 obj2.sam = []
 obj2.kat = []
 
-function each(array,f){
-	if(!Array.isArray(array)){
-    for(var i in array){
-    	f(array[i],i)
+function each(array, f) {
+    if (!Array.isArray(array)) {
+        for (var i in array) {
+            f(array[i], i)
+        }
     }
-	}
-	else{for(var i=0;i<array.length;i++){f(array[i],i)}}
+    else { for (var i = 0; i < array.length; i++) { f(array[i], i) } }
 }
 
-function s() {
+function s() {//Add Task Function
     var name = $('#userwelcom').text().split(' ')
     var Activeuser = name[1].toLowerCase()
     var value = $('#txt').val()
@@ -35,40 +35,111 @@ function s() {
             $('#txt').val("")
             obj[Activeuser].push(newtask)
             $('#two').html("")
-            for(var i=0;i<obj[Activeuser].length;i++){
-            $('#two').append(obj[Activeuser][i])}
+            for (var i = 0; i < obj[Activeuser].length; i++) {
+                $('#two').append(obj[Activeuser][i])
+            }
+            $('#three').html("")
+            for (var i = 0; i < obj2[Activeuser].length; i++) {
+                $('#three').append(obj2[Activeuser][i])
+            }
         }
     }
 
 }
 // Hamdallah driver Qamar navigator
-function t(e) {
-	var name = $('#userwelcom').text().split(' ')
+function t(e) {//Check Completed Task
+    var name = $('#userwelcom').text().split(' ')
     var Activeuser = name[1].toLowerCase()
-	var x = e.parentElement
-	var c=document.getElementsByClassName("tasks")
-	each(c,function(item,i){if(item===x)
-	obj[Activeuser].splice(i,1)})
-	obj2[Activeuser].push(x)
+    var x = e.parentElement
+    var c = document.getElementsByClassName("tasks")
+    each(c, function (item, i) {
+        if (item === x)
+            obj[Activeuser].splice(i, 1)
+    })
+    obj2[Activeuser].push(x)
     if ($(e).is(':checked')) {
-            obj2[Activeuser].push(newtask)
-            $('#two').html("")
-            for(var i=0;i<obj[Activeuser].length;i++){
-            $('#two').append(obj[Activeuser][i])}
+        $(x).attr('class', "deleted")
         $(x).css('text-decoration', 'line-through black')
+        obj2[Activeuser].push(x)
+        $('#three').html("")
+        for (var i = 0; i < obj2[Activeuser].length; i++) {
+            $('#three').append(obj2[Activeuser][i])
+        }
+
+        $('#two').html("")
+        for (var i = 0; i < obj[Activeuser].length; i++) {
+            $('#two').append(obj[Activeuser][i])
+        }
+
     }
     else {
-        $('#two').append(x)
+
+        $(x).attr('class', "tasks")
         $(x).css('text-decoration', 'none')
+        var d = document.getElementsByClassName("deleted")
+        each(d, function (item, i) {
+            if (item === x)
+                obj2[Activeuser].splice(i, 1)
+        })
+        obj[Activeuser].push(x)
+
+
+        $('#three').html("")
+        for (var i = 0; i < obj2[Activeuser].length; i++) {
+            $('#three').append(obj2[Activeuser][i])
+        }
+
+        $('#two').html("")
+        for (var i = 0; i < obj[Activeuser].length; i++) {
+            $('#two').append(obj[Activeuser][i])
+        }
+
     }
 }
 
-function d(e) {
+function d(e) {//Delete Task Function
+    // var x = e.parentElement
+    // x.remove()
+
+    var name = $('#userwelcom').text().split(' ')
+    var Activeuser = name[1].toLowerCase()
     var x = e.parentElement
-    x.remove()
+    var c = document.getElementsByClassName("tasks")
+    var d1 = document.getElementsByClassName("deleted")
+    var something = x.firstChild
+    console.log(something)
+    if ($(something).not(':checked')) {
+
+        each(c, function (item, i) {
+            if (item === x)
+                obj[Activeuser].splice(i, 1)
+        })
+    }
+
+    if ($(something).is(':checked')) {
+        each(d1, function (item, i) {
+            if (item === x)
+                obj2[Activeuser].splice(i, 1)
+        })
+    }
+
+
+    {
+        $('#three').html("")
+        for (var i = 0; i < obj2[Activeuser].length; i++) {
+            $('#three').append(obj2[Activeuser][i])
+        }
+
+        $('#two').html("")
+        for (var i = 0; i < obj[Activeuser].length; i++) {
+            $('#two').append(obj[Activeuser][i])
+        }
+
+    }
+
 }
 
-function r(e) {
+function r(e) { //Edit Task Function
     var y = e.parentElement.firstChild
     var x = e.parentElement
     if ($(y).is(':checked')) {
@@ -79,7 +150,7 @@ function r(e) {
     }
 }
 
-function w(e) {
+function w(e) {//Save Edit Function
     var y = e.parentElement.firstChild
     var x = e.parentElement
     if ($("#txt2").val() === '') {
