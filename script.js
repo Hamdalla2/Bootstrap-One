@@ -17,7 +17,7 @@ function each(array, f) {
     else { for (var i = 0; i < array.length; i++) { f(array[i], i) } }
 }
 
-function display() {
+function display() { //Display the task for each member 
     var name = $('#userwelcom').text().split(' ')
     var Activeuser = name[1].toLowerCase()
     $('#two').html("")
@@ -56,7 +56,7 @@ function t(e) {//Check Completed Task
     var name = $('#userwelcom').text().split(' ')
     var Activeuser = name[1].toLowerCase()
     var x = e.parentElement
-    var c = document.getElementsByClassName("tasks")
+    var c = document.getElementsByClassName("tasks") 
     var d = document.getElementsByClassName("deleted")
 
     if ($(e).is(':checked')) {
@@ -134,13 +134,12 @@ function w(e) {//Save Edit Function
 }
 
 
-
+// Add Family Members with Image in the page 
 var users = ['Dad', 'Mom', 'Tom']
 var famImages = ['dad.png', 'mom.jpg', 'tom.png']
-for (var i in users) {
-    var name = users[i]
-    $('#users').append('<input class=userimg type=image src=' + famImages[i] + '>' + '<span onclick=st(this)>' + users[i] + '</span>')
-}
+each(users,function(element ,i) {
+   $('#users').append('<input class=userimg type=image src=' + famImages[i] + '>' + '<span onclick=st(this)>' + element + '</span>')
+})
 
 function st(e) { //Show One Family Member Tasks
     $('#userwelcom').text('Welcome ' + $(e).text())
