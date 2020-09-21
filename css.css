@@ -80,6 +80,7 @@ input[type=button]{
 	height: 40px;
 	border: 1px;
 	text-align: center;
+	font-weight: bold;
 }
 
 .userimg{
