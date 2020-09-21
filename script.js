@@ -43,7 +43,7 @@ function s() {//Add Task Function
             var newtask = $('<div class=tasks></div>')
             var timeadd = Date().split(' ')
             timeadd.pop(); timeadd.pop(); timeadd.pop(); timeadd.pop()
-            newtask.html("<input type=checkbox onclick=t(this)>" + value + "<input type=button value=Edit onclick=r(this)><input type=button value=Delete onclick=d(this)>Added on:" + timeadd.join(' '))
+            newtask.html("<input type=checkbox onclick=t(this)>" + value + "<input type=button value=Edit onclick=r(this)><input type=button value=Delete onclick=d(this)>Added on: " + timeadd.join(' '))
             $('#txt').val("")
             obj[Activeuser].push(newtask)
             display()
@@ -123,11 +123,14 @@ function w(e) {//Save Edit Function
         alert("Don't leave it Empty!!")
     }
     else {
+        var dat=Date().split(' ')
+            dat.pop(); dat.pop(); dat.pop(); dat.pop()
+            dat=dat.join(' ')
         if ($(y).is(':checked')) {
-            x.innerHTML = "<input type=checkbox onclick=t(this) checked>" + $("#txt2").val() + "<input type='button' value='Edit' onclick=r(this)><input type=button value=Delete onclick=d(this)>"
+            x.innerHTML = "<input type=checkbox onclick=t(this) checked>" + $("#txt2").val() + "<input type='button' value='Edit' onclick=r(this)><input type=button value=Delete onclick=d(this)> Edited on: "+dat
         }
         else {
-            x.innerHTML = "<input type=checkbox onclick=t(this)>" + $("#txt2").val() + "<input type='button' value='Edit' onclick=r(this)><input type=button value=Delete onclick=d(this)>"
+            x.innerHTML = "<input type=checkbox onclick=t(this)>" + $("#txt2").val() + "<input type='button' value='Edit' onclick=r(this)><input type=button value=Delete onclick=d(this)> Edited on: "+dat
         }
     }
 }

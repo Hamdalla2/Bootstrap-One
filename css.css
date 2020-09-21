@@ -51,6 +51,26 @@ p{
 	
 }
 
+input[type=button]:hover{
+	background-color: rgb(112, 180, 192);
+	color:  rgb(29, 110, 97);
+	font-weight: bold;
+}
+
+/* Hamdallah driver Qamar navigator */
+#two *{
+	margin: 8px 5px 8px 5px;
+	font-weight: bold;
+}
+#two{text-align: left;}
+
+#three *{
+	margin: 8px 5px 8px 5px;
+	font-weight: bold;
+}
+#three{text-align: left;}
+
+/* Qamar driver Hamdallah navigator */
 input[type=button]{
 	border-radius: 12px;
 	outline: none;
@@ -59,28 +79,9 @@ input[type=button]{
 	width: 80px;
 	height: 40px;
 	border: 1px;
-
+	text-align: center;
 }
 
-input[type=button]:hover{
-	background-color: rgb(112, 180, 192);
-	color:  rgb(29, 110, 97);
-	font-weight: bold;
-	
-	
-}
-/* Hamdallah driver Qamar navigator */
-#two *{
-	margin: 8px 5px 8px 5px;
-	font-weight: bold;
-}
-
-#three *{
-	margin: 8px 5px 8px 5px;
-	font-weight: bold;
-}
-
-/* Qamar driver Hamdallah navigator */
 .userimg{
 	display: block;
 	width:40%;
