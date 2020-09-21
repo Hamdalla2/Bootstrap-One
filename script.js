@@ -1,8 +1,15 @@
 // Qamar driver Hamdallah navigator
+
+
+
+//=========================================================
+//Tasks holders and each
+//=========================================================
 var obj = {}
 obj.dad = []
 obj.mom = []
 obj.tom = []
+
 var obj2 = {}
 obj2.tom = []
 obj2.dad = []
@@ -17,7 +24,13 @@ function each(array, f) {
     else { for (var i = 0; i < array.length; i++) { f(array[i], i) } }
 }
 
-function display() { //Display the task for each member 
+
+
+
+//=========================================================
+//Display the task for each member 
+//=========================================================
+function display() {
     var name = $('#userwelcom').text().split(' ')
     var Activeuser = name[1].toLowerCase()
     $('#two').html("")
@@ -30,7 +43,13 @@ function display() { //Display the task for each member
     }
 }
 
-function s() {//Add Task Function
+
+
+
+//=========================================================
+//Add Task Function
+//=========================================================
+function s() {
     var name = $('#userwelcom').text().split(' ')
     var Activeuser = name[1].toLowerCase()
     var value = $('#txt').val()
@@ -51,8 +70,21 @@ function s() {//Add Task Function
     }
 
 }
+
+
+
+
 // Hamdallah driver Qamar navigator
-function t(e) {//Check Completed Task
+
+
+
+
+
+
+//=========================================================
+//Check Completed Task
+//=========================================================
+function t(e) {
     var name = $('#userwelcom').text().split(' ')
     var Activeuser = name[1].toLowerCase()
     var x = e.parentElement
@@ -81,7 +113,16 @@ function t(e) {//Check Completed Task
     display()
 }
 
-function d(e) {//Delete Task Function
+
+
+
+
+
+
+//=========================================================
+//Delete Task Function
+//=========================================================
+function d(e) {
     var name = $('#userwelcom').text().split(' ')
     var Activeuser = name[1].toLowerCase()
     var x = e.parentElement
@@ -103,7 +144,13 @@ function d(e) {//Delete Task Function
     display()
 }
 
-function r(e) { //Edit Task Function
+
+
+
+//=========================================================
+//Edit Task Function
+//=========================================================
+function r(e) { 
     var y = e.parentElement.firstChild
     var x = e.parentElement
     if ($(y).is(':checked')) {
@@ -114,7 +161,14 @@ function r(e) { //Edit Task Function
     }
 }
 
-function w(e) {//Save Edit Function
+
+
+
+
+//=========================================================
+//Save Edit Function
+//=========================================================
+function w(e) {
     var y = e.parentElement.firstChild
     var x = e.parentElement
     if ($("#txt2").val() === '') {
@@ -134,14 +188,27 @@ function w(e) {//Save Edit Function
 }
 
 
+
+
+//=========================================================
 // Add Family Members with Image in the page 
+//=========================================================
 var users = ['Dad', 'Mom', 'Tom']
 var famImages = ['dad.png', 'mom.jpg', 'tom.png']
 each(users,function(element ,i) {
    $('#users').append('<input class=userimg type=image src=' + famImages[i] + '>' + '<span onclick=st(this)>' + element + '</span>')
 })
 
-function st(e) { //Show One Family Member Tasks
+
+
+
+
+
+
+//=========================================================
+//Show One Family Member Tasks
+//=========================================================
+function st(e) { 
     $('#userwelcom').text('Welcome ' + $(e).text())
     $('span').css('color', 'rgb(33, 128, 112)')
     $(e).css('color', 'black')
