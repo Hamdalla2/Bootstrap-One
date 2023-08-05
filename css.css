@@ -1,77 +1,78 @@
-/* Hamdallah driver Qamar navigator */
-body{
+body {
 	background-image: url("https://ak.picdn.net/shutterstock/videos/17023603/thumb/1.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
 }
 
-#one{
+#one {
 	display: block;
 	float: right;
 	width: 80%;
 	text-align: center;
-	color:rgb(33, 128, 112);
+	color: rgb(33, 128, 112);
 }
 
-#users{
+#users {
 	display: block;
 	float: left;
 	width: 20%;
 	text-align: center;
-	color:rgb(33, 128, 112);
+	color: rgb(33, 128, 112);
 	border-right: black;
 }
 
-.two{
+.two {
 	border-radius: 12px;
 	border-top: 5px solid rgb(33, 128, 112);
 	margin-top: 10px;
 	margin-right: 30px;
 }
 
-/* Qamar driver Hamdallah navigator */
-input[type=text]{
-width: 70%;
-height: 40px;
-border-radius: 12px;
-background-color: rgb(213, 235, 213);
-margin-right: 16px;
-outline: none;
-font-weight: bold;
-text-align: center;
-margin-bottom: 20px;
-border: 1px;
+input[type=text] {
+	width: 70%;
+	height: 40px;
+	border-radius: 12px;
+	background-color: rgb(213, 235, 213);
+	margin-right: 16px;
+	outline: none;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
+	border: 1px;
 }
 
-p{
+p {
 	font-weight: bold;
 	font-size: 30px;
 	margin-right: 9%;
-	
 }
 
-input[type=button]:hover{
+input[type=button]:hover {
 	background-color: rgb(112, 180, 192);
-	color:  rgb(29, 110, 97);
+	color: rgb(29, 110, 97);
 	font-weight: bold;
 }
 
-/* Hamdallah driver Qamar navigator */
-#two *{
+#two * {
 	margin: 8px 5px 8px 5px;
 	font-weight: bold;
 }
-#two{text-align: left;}
 
-#three *{
+#two {
+	text-align: left;
+}
+
+#three * {
 	margin: 8px 5px 8px 5px;
 	font-weight: bold;
 }
-#three{text-align: left;}
 
-/* Qamar driver Hamdallah navigator */
-input[type=button]{
+#three {
+	text-align: left;
+}
+
+input[type=button] {
 	border-radius: 12px;
 	outline: none;
 	background-color: rgb(33, 128, 112);
@@ -83,28 +84,24 @@ input[type=button]{
 	font-weight: bold;
 }
 
-.userimg{
+.userimg {
 	display: block;
-	width:40%;
+	width: 40%;
 	height: auto;
 	margin-left: 25%;
 	margin-top: 25px;
 	outline: none;
 	cursor: auto;
 	border-radius: 50%;
-
-
-
 }
-span{
+
+span {
 	font-weight: bold;
 	font-size: 20px;
 	margin-right: 9%;
-	cursor:pointer;
-
-	
+	cursor: pointer;
 }
 
-#tasks{
-	border-bottom:  3px solid paleturquoise ;
+#tasks {
+	border-bottom: 3px solid paleturquoise;
 }
